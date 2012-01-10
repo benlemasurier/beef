@@ -86,7 +86,7 @@ main(int argc, char *argv[])
   signal(SIGINT, destroy);
 
   pthread_create(&event_thread, NULL, event_monitor, NULL);
-  while(1) {}
+  pthread_join(event_thread, NULL);
 
   return EXIT_SUCCESS;
 }
