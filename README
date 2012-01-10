@@ -1,0 +1,10 @@
+caclulate events per <n/sec> from an input stream
+
+compile:
+
+gcc -lpthread beef.c -o beef
+
+example:
+
+# HTTP req/sec
+tailf /var/log/nginx/access.log | ./beef 1
